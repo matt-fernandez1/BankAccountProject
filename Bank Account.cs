@@ -50,17 +50,21 @@ namespace BankAccountProject
             Console.WriteLine("Your checking account balance is $2,000");
             Console.WriteLine("Your savings account balance is $5,000");
             Console.WriteLine("Your reserve account balance is $10,000");
-            Console.WriteLine("Press 6 in order to withdraw funds");
-            Console.WriteLine("Press 7 in order to deposit funds");
-            Console.WriteLine("Press 8 in order to view your account information");
+            Console.WriteLine("Press 6 in order to withdraw funds from checking");
+            Console.WriteLine("Press 7 in order to withdraw funds from savings");
+            Console.WriteLine("press 8 in order to withdraw funds from reserves");
+            Console.WriteLine("Press 9 in order to deposit funds into checking");
+            Console.WriteLine("Press 10 to deposit funds into savings");
+            Console.WriteLine("Press 11 to deposit funds into reserves");
+            Console.WriteLine("Press 12 in order to view your account information");
             int answer = int.Parse(Console.ReadLine());
 
             while (true)
                 if (answer == 6)
                 {
-                    Console.WriteLine("From which account would you like to withdraw?");
-                    Console.ReadLine();
                     Console.WriteLine("How much money would you like to withdraw?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(2000 - amount); Console.WriteLine("This is your current balance");
                     Console.ReadLine();
 
                 }
@@ -68,51 +72,59 @@ namespace BankAccountProject
 
                 else if (answer == 7)
                 {
-                    Console.WriteLine("To which account would you like to deposit?");
+                    Console.WriteLine("How much money would you like to withdraw?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(5000 - amount); Console.WriteLine("This is your current balance");
                     Console.ReadLine();
-                    Console.WriteLine("How much money would you like to deposit?");
-                    Console.ReadLine();
-                    
+
                 }
 
                 else if (answer == 8)
+                {
+                    Console.WriteLine("How much money would you like to withdraw?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(10000 - amount); Console.WriteLine("This is your current balance");
+                    Console.ReadLine();
+                }
+
+                else if (answer == 9)
+                {
+                    Console.WriteLine("How much money would you like to deposit?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(2000 + amount); Console.WriteLine("This is your current balance");
+                    Console.ReadLine();
+                }
+
+                else if (answer == 10)
+                {
+                    Console.WriteLine("How much money would you like to deposit?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(5000 + amount); Console.WriteLine("This is your current balance");
+                    Console.ReadLine();
+                }
+
+                else if (answer == 11)
+                {
+                    Console.WriteLine("How much money would you like to deposit?");
+                    double amount = int.Parse(Console.ReadLine());
+                    Console.WriteLine(10000 + amount); Console.WriteLine("This is your current balance");
+                    Console.ReadLine();
+                }
+
+                else if (answer == 12)
                 {
                     Console.WriteLine("We take security seriously. For more information:");
                     Console.WriteLine("Call your personal banker at (440) 465-7641");
                     Console.WriteLine("Enjoy your day.");
                     break;
                 }
-               
 
 
 
         }
-        ////methods
-        ////static void BarrytheBlowfish()
-        //{
-        //    while (true)
-        //    {
-        //        Console.WriteLine("1. Barry needs food, press 1 to feed him");
-        //        Console.WriteLine("2. Barry needs water, press 2 to give him something to drink");
-        //        Console.WriteLine("3. Barry is bored and wants to play. Press 3 to play with him");
-        //        Console.WriteLine("4. Barry is satisfied and needs no care!");
-        //        int answer = int.Parse(Console.ReadLine());
-        //        if (answer == 1)
-        //        {
-        //            Console.WriteLine("Barry is now full.He has full hunger of 10");
-        //        }
-        //        else if (answer == 2)
-        //        {
-        //            Console.WriteLine("Barry is now fully hydrated.He has full thirst of 10");
-        //        }
-        //        else if (answer == 3)
-        //        {
-        //            Console.WriteLine("Barry is now happy and energized. His boredom is full at 10");
-        //            break;
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Barry has been well taken care of. Thank you for caring for him and go back to your day");
-        //        }
+       
     }
 }
+
+
+
